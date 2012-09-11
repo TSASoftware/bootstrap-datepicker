@@ -682,7 +682,8 @@
 						while (v<0) v += 12;
 						v %= 12;
 						d.setUTCMonth(v);
-						while (d.getUTCMonth() != v)
+                        
+						while (d.getUTCMonth() != v && !isNaN(v))
 							d.setUTCDate(d.getUTCDate()-1);
 						return d;
 					},
